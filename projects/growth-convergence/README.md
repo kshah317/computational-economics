@@ -18,9 +18,17 @@ Across 184 countries, the line does slope down, and it's not just noise. Countri
 
 The country-level stories make that obvious. China and Equatorial Guinea grew at almost the exact same blistering rate, close to 8% a year, for completely different reasons: one built manufacturing capacity, the other exported oil that showed up in per-capita GDP without transforming the country the way it did in China. Meanwhile the three biggest fallers, the UAE, Brunei, and Nauru, were all oil or mineral rich in 1990 and simply saw output per person shrink as reserves and prices moved against them. Convergence on paper can hide very different realities underneath it, which a single coefficient will never show you by itself.
 
+## Robustness checks
+
+The headline regression above treats every country as one data point, Nauru (population about 12,000) and China (population 1.4 billion) each get exactly one vote. That's the honest answer to the question I originally asked, "do poorer countries grow faster," but it's worth checking whether it survives a different, equally reasonable question: "did poorer *people* converge," where big countries count more because more people actually live through what happened there.
+
+So I reran the same regression weighted by each country's 1990 population. The slope goes from -0.0039 to -0.0156, four times steeper, and R-squared jumps from 0.085 to 0.505, meaning starting income now explains about half the variation instead of less than a tenth. Both results are still statistically significant. This isn't a coincidence or a data artifact, it's the well-documented gap between country-level and population-weighted convergence that Xavier Sala-i-Martin wrote about directly in ["The World Distribution of Income: Falling Poverty and...Convergence, Period"](https://academic.oup.com/qje/article-abstract/121/2/351/1883992) (Quarterly Journal of Economics, 2006): once you weight by population, China and India's growth since 1990 does most of the work, because roughly a third of humanity lived in those two countries and both went from poor to middle-income over this exact window.
+
+Neither number is "more correct," they answer different questions. The unweighted regression is the fair test of whether being a poor country predicts faster growth. The weighted one is closer to asking whether the average person alive in 1990 ended up converging toward the average person in a rich country, and by that measure the picture looks a lot more like a convergence success story.
+
 ## Data
 
-GDP per capita, PPP-adjusted, from the World Bank's free API, no key needed. 1990 and 2023 specifically, a fixed window rather than an open-ended pull, to keep the comparison clean. 184 countries made the cut; everything else was missing a usable number in one of the two years, mostly small territories plus a handful of countries like Afghanistan and South Sudan where consistent data collection has been genuinely difficult.
+GDP per capita, PPP-adjusted, from the World Bank's free API, no key needed. 1990 and 2023 specifically, a fixed window rather than an open-ended pull, to keep the comparison clean. 184 countries made the cut; everything else was missing a usable number in one of the two years, mostly small territories plus a handful of countries like Afghanistan and South Sudan where consistent data collection has been genuinely difficult. Each country also carries its 1990 total population, pulled from the same API, used only for the population-weighted robustness check below.
 
 ## Structure
 
@@ -42,7 +50,7 @@ data/
 python cli.py
 ```
 
-From the menu: run the regression and see the headline result, browse the fastest- and slowest-growing countries, save the scatter plot, or refresh the dataset live from the World Bank (needs internet).
+From the menu: run the regression and see the headline result, browse the fastest- and slowest-growing countries, save the scatter plot, refresh the dataset live from the World Bank (needs internet), or run the population-weighted robustness check.
 
 ```bash
 python -m unittest tests.py -v

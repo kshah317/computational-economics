@@ -109,26 +109,27 @@ def two_tailed_p_value(t_stat: float, degrees_of_freedom: int) -> float:
     return _regularized_incomplete_beta(degrees_of_freedom / 2.0, 0.5, x)
 
 
-def run_regression(rows: List[dict]) -> RegressionResult:
-    # a single-predictor OLS regression, growth_rate on log(gdp_1990),
-    # this is the classic Barro-style "beta convergence" specification
-    x = np.array([r["log_gdp_1990"] for r in rows])
-    y = np.array([r["growth_rate"] for r in rows])
-    n = len(rows)
+def _weighted_ols(x: np.ndarray, y: np.ndarray, weights: np.ndarray) -> RegressionResult:
+    # single-predictor weighted least squares. equal weights collapses this
+    # to plain OLS, so the unweighted regression below is just this function
+    # called with every weight set to 1, one implementation, two use cases.
+    n = len(x)
+    w_sum = np.sum(weights)
+    x_mean = np.sum(weights * x) / w_sum
+    y_mean = np.sum(weights * y) / w_sum
 
-    x_mean, y_mean = x.mean(), y.mean()
-    slope = np.sum((x - x_mean) * (y - y_mean)) / np.sum((x - x_mean) ** 2)
+    slope = np.sum(weights * (x - x_mean) * (y - y_mean)) / np.sum(weights * (x - x_mean) ** 2)
     intercept = y_mean - slope * x_mean
 
     predicted = intercept + slope * x
     residuals = y - predicted
-    sse = np.sum(residuals ** 2)
-    sst = np.sum((y - y_mean) ** 2)
+    sse = np.sum(weights * residuals ** 2)
+    sst = np.sum(weights * (y - y_mean) ** 2)
     r_squared = 1.0 - sse / sst
 
     degrees_of_freedom = n - 2
     residual_variance = sse / degrees_of_freedom
-    slope_std_err = math.sqrt(residual_variance / np.sum((x - x_mean) ** 2))
+    slope_std_err = math.sqrt(residual_variance / np.sum(weights * (x - x_mean) ** 2))
     t_stat = slope / slope_std_err
     p_value = two_tailed_p_value(t_stat, degrees_of_freedom)
 
@@ -136,6 +137,29 @@ def run_regression(rows: List[dict]) -> RegressionResult:
         n=n, slope=slope, intercept=intercept, slope_std_err=slope_std_err,
         t_stat=t_stat, p_value=p_value, r_squared=r_squared,
     )
+
+
+def run_regression(rows: List[dict]) -> RegressionResult:
+    # a single-predictor OLS regression, growth_rate on log(gdp_1990),
+    # this is the classic Barro-style "beta convergence" specification.
+    # every country counts equally here, regardless of population.
+    x = np.array([r["log_gdp_1990"] for r in rows])
+    y = np.array([r["growth_rate"] for r in rows])
+    weights = np.ones(len(rows))
+    return _weighted_ols(x, y, weights)
+
+
+def run_population_weighted_regression(rows: List[dict]) -> RegressionResult:
+    # same specification, but each country is weighted by its 1990
+    # population, so this answers "did the average *person* converge"
+    # rather than "did the average *country* converge." this is the
+    # distinction Sala-i-Martin's later work on the world income
+    # distribution is built around, China and India move the needle here
+    # in a way they can't in the unweighted, one-country-one-vote version.
+    x = np.array([r["log_gdp_1990"] for r in rows])
+    y = np.array([r["growth_rate"] for r in rows])
+    weights = np.array([r["pop_1990"] for r in rows], dtype=float)
+    return _weighted_ols(x, y, weights)
 
 
 def top_and_bottom_growers(rows: List[dict], n: int = 8) -> tuple:
@@ -187,7 +211,11 @@ def plot_convergence(rows: List[dict], result: RegressionResult, out_path: str) 
 if __name__ == "__main__":
     countries = add_growth_fields(load_countries())
     regression = run_regression(countries)
+    print("unweighted (one country, one vote):")
     print(interpret(regression))
+    weighted = run_population_weighted_regression(countries)
+    print("\npopulation-weighted (one person, one vote):")
+    print(interpret(weighted))
     plot_path = os.path.join(os.path.dirname(__file__), "convergence_plot.png")
     plot_convergence(countries, regression, plot_path)
-    print(f"saved plot to {plot_path}")
+    print(f"\nsaved plot to {plot_path}")

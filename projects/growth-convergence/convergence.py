@@ -9,8 +9,7 @@ import numpy as np
 # this is the actual convergence test: does a country's starting income level
 # (1990) predict how fast it grew over the next 33 years? if poorer countries
 # grew faster on average, the slope of that relationship comes out negative,
-# which is the textbook definition of "beta convergence." everything here is
-# plain numpy, no statsmodels or scipy, including the significance test.
+# which is the textbook definition of "beta convergence." 
 
 DATA_PATH = os.path.join(os.path.dirname(__file__), "data", "gdp_per_capita_1990_2023.json")
 START_YEAR = 1990
@@ -20,7 +19,6 @@ SPAN_YEARS = END_YEAR - START_YEAR
 
 @dataclass
 class RegressionResult:
-    # everything a reader needs to judge the regression at a glance
     n: int
     slope: float
     intercept: float
@@ -53,9 +51,7 @@ def _log_beta(a: float, b: float) -> float:
 
 
 def _betacf(a: float, b: float, x: float, max_iter: int = 200, eps: float = 1e-10) -> float:
-    # Lentz's continued fraction for the incomplete beta function, this is
-    # the same core algorithm scipy uses internally, written out by hand so
-    # the project has no dependency beyond numpy
+    # Lentz's continued fraction for the incomplete beta function
     qab, qap, qam = a + b, a + 1.0, a - 1.0
     c = 1.0
     d = 1.0 - qab * x / qap
@@ -152,10 +148,7 @@ def run_regression(rows: List[dict]) -> RegressionResult:
 def run_population_weighted_regression(rows: List[dict]) -> RegressionResult:
     # same specification, but each country is weighted by its 1990
     # population, so this answers "did the average *person* converge"
-    # rather than "did the average *country* converge." this is the
-    # distinction Sala-i-Martin's later work on the world income
-    # distribution is built around, China and India move the needle here
-    # in a way they can't in the unweighted, one-country-one-vote version.
+    # rather than "did the average *country* converge." 
     x = np.array([r["log_gdp_1990"] for r in rows])
     y = np.array([r["growth_rate"] for r in rows])
     weights = np.array([r["pop_1990"] for r in rows], dtype=float)
@@ -170,8 +163,7 @@ def top_and_bottom_growers(rows: List[dict], n: int = 8) -> tuple:
 
 
 def interpret(result: RegressionResult) -> str:
-    # plain-language readout, since the whole point is a result someone can
-    # understand without knowing what a beta coefficient normally means
+    # plain-language readout
     direction = "converging" if result.slope < 0 else "diverging"
     significant = result.p_value < 0.05
     confidence = "statistically significant" if significant else "not statistically significant"
@@ -182,9 +174,7 @@ def interpret(result: RegressionResult) -> str:
 
 
 def plot_convergence(rows: List[dict], result: RegressionResult, out_path: str) -> None:
-    # scatter of starting income vs growth rate, with the fitted line drawn
-    # through it, this is the picture that makes convergence (or its
-    # absence) visible at a glance
+    # scatter of starting income vs growth rate, with the fitted line drawn through it
     import matplotlib
     matplotlib.use("Agg")  # no display in this environment, just save the file
     import matplotlib.pyplot as plt

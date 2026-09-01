@@ -20,6 +20,27 @@ def run_regression_summary():
     )
 
 
+def run_weighted_comparison():
+    # robustness check: does the answer change if big countries count more
+    # than tiny ones? unweighted treats Nauru and China as one data point
+    # each, this weights each country by its 1990 population instead, so
+    # it's really asking about people converging rather than countries
+    rows = conv.add_growth_fields(conv.load_countries())
+    unweighted = conv.run_regression(rows)
+    weighted = conv.run_population_weighted_regression(rows)
+
+    print(f"\n{len(rows)} countries, {conv.START_YEAR}-{conv.END_YEAR}")
+    print("\nunweighted (one country, one vote):")
+    print(conv.interpret(unweighted))
+    print("\npopulation-weighted (one person, one vote):")
+    print(conv.interpret(weighted))
+    print(
+        "\nif the weighted slope is more negative and R-squared is higher, "
+        "it means convergence looks stronger once you count by people "
+        "instead of by country, mostly a China and India effect."
+    )
+
+
 def show_rankings():
     # concrete, readable version of the same story: actual countries,
     # actual numbers, not just a coefficient
@@ -64,16 +85,17 @@ def main():
         "2": ("see the fastest growing and slowest growing countries", show_rankings),
         "3": ("save the convergence scatter plot", make_plot),
         "4": ("refresh the dataset from the live World Bank API (needs internet)", refresh_live_data),
+        "5": ("robustness check: unweighted vs population-weighted", run_weighted_comparison),
     }
 
     while True:
         print("\ngrowth convergence tracker")
         for key, (label, _) in menu.items():
             print(f"  {key}. {label}")
-        print("  5. quit")
+        print("  6. quit")
 
         choice = input("> ").strip()
-        if choice == "5":
+        if choice == "6":
             break
         action = menu.get(choice)
         if action:

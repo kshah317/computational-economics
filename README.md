@@ -12,7 +12,8 @@ One subfolder per analysis under `projects/`. If a project grows large or needs 
 computational-economics/
 ├── README.md
 └── projects/
-    └── example-policy-analysis/   <- rename per project; one README each
+    ├── example-policy-analysis/   <- rename per project; one README each
+    └── growth-convergence/
 ```
 
 ## Projects
@@ -20,6 +21,7 @@ computational-economics/
 | Project | Question | Data source | Key finding |
 |---|---|---|---|
 | [example-policy-analysis](projects/example-policy-analysis) | *placeholder* | *placeholder* | *placeholder* |
+| [growth-convergence](projects/growth-convergence) | Did poorer countries grow faster than rich ones between 1990 and 2023? | World Bank, GDP per capita (PPP) | Yes, on average. The slope is significantly negative (p = 0.0001), though the fit is loose (R² = 0.085) since plenty of countries diverge instead of converging. |
 
 ## Conventions
 

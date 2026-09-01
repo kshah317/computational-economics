@@ -62,6 +62,38 @@ class RegressionMathTests(unittest.TestCase):
         self.assertGreater(small_t, large_t)
 
 
+class WeightedRegressionTests(unittest.TestCase):
+    # the population-weighted robustness check reuses the same OLS math with
+    # weights added in, these confirm the weighting actually does something
+    # and reduces to plain OLS when every weight is equal
+
+    def test_equal_weights_match_unweighted_regression(self):
+        rows = []
+        for i in range(1, 21):
+            x = float(i)
+            y = 10.0 - 2.0 * x + (0.3 if i % 3 == 0 else 0.0)  # a little noise
+            rows.append({"log_gdp_1990": x, "growth_rate": y, "pop_1990": 1_000_000})
+        unweighted = conv.run_regression(rows)
+        weighted = conv.run_population_weighted_regression(rows)
+        self.assertAlmostEqual(unweighted.slope, weighted.slope, places=6)
+        self.assertAlmostEqual(unweighted.r_squared, weighted.r_squared, places=6)
+
+    def test_heavily_weighted_point_pulls_the_fit_toward_it(self):
+        # two clusters of points with opposite slopes; whichever cluster
+        # gets the huge population weight should dominate the fitted slope
+        rows = []
+        for i in range(1, 11):
+            # small-population cluster: slope of roughly +1
+            rows.append({"log_gdp_1990": float(i), "growth_rate": float(i), "pop_1990": 1_000})
+        for i in range(1, 11):
+            # huge-population cluster: slope of roughly -1
+            rows.append({"log_gdp_1990": float(i) + 20.0, "growth_rate": -float(i), "pop_1990": 1_000_000_000})
+        weighted = conv.run_population_weighted_regression(rows)
+        # the billion-person cluster should pull the weighted slope negative,
+        # even though half the *countries* in the data have a positive slope
+        self.assertLess(weighted.slope, 0.0)
+
+
 class RankingTests(unittest.TestCase):
 
     def test_top_and_bottom_growers_are_correctly_ordered(self):
@@ -94,6 +126,18 @@ class EndToEndTests(unittest.TestCase):
         self.assertEqual(result.n, len(self.rows))
         self.assertTrue(np.isfinite(result.slope))
         self.assertTrue(0.0 <= result.p_value <= 1.0)
+
+    def test_population_weighted_regression_runs_on_real_data(self):
+        result = conv.run_population_weighted_regression(self.rows)
+        self.assertEqual(result.n, len(self.rows))
+        self.assertTrue(np.isfinite(result.slope))
+        self.assertTrue(0.0 <= result.p_value <= 1.0)
+        # not a strict requirement of the method, just a check that this
+        # dataset actually shows the pattern the README talks about: the
+        # population-weighted slope on this data is steeper than the
+        # unweighted one, since China and India dominate the weighting
+        unweighted = conv.run_regression(self.rows)
+        self.assertLess(result.slope, unweighted.slope)
 
 
 if __name__ == "__main__":

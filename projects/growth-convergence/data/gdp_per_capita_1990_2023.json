@@ -1,0 +1,1106 @@
+[
+  {
+    "iso3": "ALB",
+    "country": "Albania",
+    "gdp_1990": 5560.86,
+    "gdp_2023": 20501.65
+  },
+  {
+    "iso3": "DZA",
+    "country": "Algeria",
+    "gdp_1990": 11728.55,
+    "gdp_2023": 15159.32
+  },
+  {
+    "iso3": "AND",
+    "country": "Andorra",
+    "gdp_1990": 50036.3,
+    "gdp_2023": 64631.3
+  },
+  {
+    "iso3": "AGO",
+    "country": "Angola",
+    "gdp_1990": 8368.72,
+    "gdp_2023": 8597.54
+  },
+  {
+    "iso3": "ATG",
+    "country": "Antigua and Barbuda",
+    "gdp_1990": 21074.58,
+    "gdp_2023": 28712.4
+  },
+  {
+    "iso3": "ARG",
+    "country": "Argentina",
+    "gdp_1990": 17007.28,
+    "gdp_2023": 27230.4
+  },
+  {
+    "iso3": "ARM",
+    "country": "Armenia",
+    "gdp_1990": 6137.6,
+    "gdp_2023": 19402.75
+  },
+  {
+    "iso3": "ABW",
+    "country": "Aruba",
+    "gdp_1990": 33063.0,
+    "gdp_2023": 42783.25
+  },
+  {
+    "iso3": "AUS",
+    "country": "Australia",
+    "gdp_1990": 36267.74,
+    "gdp_2023": 60684.96
+  },
+  {
+    "iso3": "AUT",
+    "country": "Austria",
+    "gdp_1990": 43258.18,
+    "gdp_2023": 64536.21
+  },
+  {
+    "iso3": "AZE",
+    "country": "Azerbaijan",
+    "gdp_1990": 10776.07,
+    "gdp_2023": 21310.74
+  },
+  {
+    "iso3": "BHS",
+    "country": "Bahamas, The",
+    "gdp_1990": 33072.16,
+    "gdp_2023": 35221.27
+  },
+  {
+    "iso3": "BHR",
+    "country": "Bahrain",
+    "gdp_1990": 41856.54,
+    "gdp_2023": 57819.91
+  },
+  {
+    "iso3": "BGD",
+    "country": "Bangladesh",
+    "gdp_1990": 2069.78,
+    "gdp_2023": 8242.4
+  },
+  {
+    "iso3": "BRB",
+    "country": "Barbados",
+    "gdp_1990": 19613.25,
+    "gdp_2023": 20865.02
+  },
+  {
+    "iso3": "BLR",
+    "country": "Belarus",
+    "gdp_1990": 12351.64,
+    "gdp_2023": 27782.44
+  },
+  {
+    "iso3": "BEL",
+    "country": "Belgium",
+    "gdp_1990": 41640.06,
+    "gdp_2023": 63042.01
+  },
+  {
+    "iso3": "BLZ",
+    "country": "Belize",
+    "gdp_1990": 8251.62,
+    "gdp_2023": 12371.01
+  },
+  {
+    "iso3": "BEN",
+    "country": "Benin",
+    "gdp_1990": 2207.07,
+    "gdp_2023": 3721.21
+  },
+  {
+    "iso3": "BMU",
+    "country": "Bermuda",
+    "gdp_1990": 79747.48,
+    "gdp_2023": 102268.92
+  },
+  {
+    "iso3": "BTN",
+    "country": "Bhutan",
+    "gdp_1990": 3411.38,
+    "gdp_2023": 14610.3
+  },
+  {
+    "iso3": "BOL",
+    "country": "Bolivia",
+    "gdp_1990": 6247.1,
+    "gdp_2023": 11616.16
+  },
+  {
+    "iso3": "BIH",
+    "country": "Bosnia and Herzegovina",
+    "gdp_1990": 2413.95,
+    "gdp_2023": 19804.92
+  },
+  {
+    "iso3": "BWA",
+    "country": "Botswana",
+    "gdp_1990": 10520.92,
+    "gdp_2023": 18932.48
+  },
+  {
+    "iso3": "BRA",
+    "country": "Brazil",
+    "gdp_1990": 12633.29,
+    "gdp_2023": 19079.81
+  },
+  {
+    "iso3": "BRN",
+    "country": "Brunei Darussalam",
+    "gdp_1990": 118163.68,
+    "gdp_2023": 76616.7
+  },
+  {
+    "iso3": "BGR",
+    "country": "Bulgaria",
+    "gdp_1990": 14954.96,
+    "gdp_2023": 33073.68
+  },
+  {
+    "iso3": "BFA",
+    "country": "Burkina Faso",
+    "gdp_1990": 1107.86,
+    "gdp_2023": 2486.21
+  },
+  {
+    "iso3": "BDI",
+    "country": "Burundi",
+    "gdp_1990": 1460.28,
+    "gdp_2023": 1033.01
+  },
+  {
+    "iso3": "CPV",
+    "country": "Cabo Verde",
+    "gdp_1990": 1848.76,
+    "gdp_2023": 9228.46
+  },
+  {
+    "iso3": "KHM",
+    "country": "Cambodia",
+    "gdp_1990": 2646.1,
+    "gdp_2023": 6695.29
+  },
+  {
+    "iso3": "CMR",
+    "country": "Cameroon",
+    "gdp_1990": 4517.62,
+    "gdp_2023": 4875.25
+  },
+  {
+    "iso3": "CAN",
+    "country": "Canada",
+    "gdp_1990": 40475.11,
+    "gdp_2023": 58088.38
+  },
+  {
+    "iso3": "CAF",
+    "country": "Central African Republic",
+    "gdp_1990": 1481.25,
+    "gdp_2023": 1132.68
+  },
+  {
+    "iso3": "TCD",
+    "country": "Chad",
+    "gdp_1990": 1711.37,
+    "gdp_2023": 2433.53
+  },
+  {
+    "iso3": "CHL",
+    "country": "Chile",
+    "gdp_1990": 10952.66,
+    "gdp_2023": 29600.42
+  },
+  {
+    "iso3": "CHN",
+    "country": "China",
+    "gdp_1990": 1666.93,
+    "gdp_2023": 22687.25
+  },
+  {
+    "iso3": "COL",
+    "country": "Colombia",
+    "gdp_1990": 9998.81,
+    "gdp_2023": 18406.62
+  },
+  {
+    "iso3": "COM",
+    "country": "Comoros",
+    "gdp_1990": 3114.56,
+    "gdp_2023": 3508.16
+  },
+  {
+    "iso3": "COD",
+    "country": "Congo, Dem. Rep.",
+    "gdp_1990": 2403.97,
+    "gdp_2023": 1559.34
+  },
+  {
+    "iso3": "COG",
+    "country": "Congo, Rep.",
+    "gdp_1990": 8699.53,
+    "gdp_2023": 6172.29
+  },
+  {
+    "iso3": "CRI",
+    "country": "Costa Rica",
+    "gdp_1990": 10953.43,
+    "gdp_2023": 26378.54
+  },
+  {
+    "iso3": "CIV",
+    "country": "Cote d'Ivoire",
+    "gdp_1990": 5255.51,
+    "gdp_2023": 6520.9
+  },
+  {
+    "iso3": "HRV",
+    "country": "Croatia",
+    "gdp_1990": 23399.74,
+    "gdp_2023": 41320.26
+  },
+  {
+    "iso3": "CYP",
+    "country": "Cyprus",
+    "gdp_1990": 27666.65,
+    "gdp_2023": 51674.9
+  },
+  {
+    "iso3": "CZE",
+    "country": "Czechia",
+    "gdp_1990": 27918.14,
+    "gdp_2023": 47558.41
+  },
+  {
+    "iso3": "DNK",
+    "country": "Denmark",
+    "gdp_1990": 46200.47,
+    "gdp_2023": 68993.9
+  },
+  {
+    "iso3": "DMA",
+    "country": "Dominica",
+    "gdp_1990": 11311.55,
+    "gdp_2023": 18278.23
+  },
+  {
+    "iso3": "DOM",
+    "country": "Dominican Republic",
+    "gdp_1990": 7327.73,
+    "gdp_2023": 23282.49
+  },
+  {
+    "iso3": "ECU",
+    "country": "Ecuador",
+    "gdp_1990": 9104.82,
+    "gdp_2023": 14321.16
+  },
+  {
+    "iso3": "EGY",
+    "country": "Egypt, Arab Rep.",
+    "gdp_1990": 8006.62,
+    "gdp_2023": 16691.39
+  },
+  {
+    "iso3": "SLV",
+    "country": "El Salvador",
+    "gdp_1990": 5976.02,
+    "gdp_2023": 11404.33
+  },
+  {
+    "iso3": "GNQ",
+    "country": "Equatorial Guinea",
+    "gdp_1990": 1122.82,
+    "gdp_2023": 15302.15
+  },
+  {
+    "iso3": "EST",
+    "country": "Estonia",
+    "gdp_1990": 19163.23,
+    "gdp_2023": 41284.77
+  },
+  {
+    "iso3": "SWZ",
+    "country": "Eswatini",
+    "gdp_1990": 5447.74,
+    "gdp_2023": 10181.5
+  },
+  {
+    "iso3": "ETH",
+    "country": "Ethiopia",
+    "gdp_1990": 874.35,
+    "gdp_2023": 2757.96
+  },
+  {
+    "iso3": "FJI",
+    "country": "Fiji",
+    "gdp_1990": 7820.72,
+    "gdp_2023": 13194.8
+  },
+  {
+    "iso3": "FIN",
+    "country": "Finland",
+    "gdp_1990": 38807.12,
+    "gdp_2023": 56051.77
+  },
+  {
+    "iso3": "FRA",
+    "country": "France",
+    "gdp_1990": 38655.89,
+    "gdp_2023": 54296.72
+  },
+  {
+    "iso3": "GAB",
+    "country": "Gabon",
+    "gdp_1990": 23884.81,
+    "gdp_2023": 18701.42
+  },
+  {
+    "iso3": "GMB",
+    "country": "Gambia, The",
+    "gdp_1990": 2653.78,
+    "gdp_2023": 2963.6
+  },
+  {
+    "iso3": "GEO",
+    "country": "Georgia",
+    "gdp_1990": 12917.09,
+    "gdp_2023": 22590.53
+  },
+  {
+    "iso3": "DEU",
+    "country": "Germany",
+    "gdp_1990": 42287.65,
+    "gdp_2023": 63140.19
+  },
+  {
+    "iso3": "GHA",
+    "country": "Ghana",
+    "gdp_1990": 2785.67,
+    "gdp_2023": 6808.54
+  },
+  {
+    "iso3": "GRC",
+    "country": "Greece",
+    "gdp_1990": 26916.31,
+    "gdp_2023": 36700.51
+  },
+  {
+    "iso3": "GRL",
+    "country": "Greenland",
+    "gdp_1990": 38137.57,
+    "gdp_2023": 71037.54
+  },
+  {
+    "iso3": "GRD",
+    "country": "Grenada",
+    "gdp_1990": 8883.92,
+    "gdp_2023": 17093.16
+  },
+  {
+    "iso3": "GTM",
+    "country": "Guatemala",
+    "gdp_1990": 7594.73,
+    "gdp_2023": 12380.37
+  },
+  {
+    "iso3": "GIN",
+    "country": "Guinea",
+    "gdp_1990": 2105.75,
+    "gdp_2023": 3904.82
+  },
+  {
+    "iso3": "GNB",
+    "country": "Guinea-Bissau",
+    "gdp_1990": 1967.97,
+    "gdp_2023": 2660.81
+  },
+  {
+    "iso3": "GUY",
+    "country": "Guyana",
+    "gdp_1990": 5074.43,
+    "gdp_2023": 49312.36
+  },
+  {
+    "iso3": "HTI",
+    "country": "Haiti",
+    "gdp_1990": 3959.03,
+    "gdp_2023": 2939.12
+  },
+  {
+    "iso3": "HND",
+    "country": "Honduras",
+    "gdp_1990": 1172.08,
+    "gdp_2023": 6467.88
+  },
+  {
+    "iso3": "HKG",
+    "country": "Hong Kong SAR, China",
+    "gdp_1990": 31598.76,
+    "gdp_2023": 64387.67
+  },
+  {
+    "iso3": "HUN",
+    "country": "Hungary",
+    "gdp_1990": 21297.0,
+    "gdp_2023": 40333.25
+  },
+  {
+    "iso3": "ISL",
+    "country": "Iceland",
+    "gdp_1990": 42336.43,
+    "gdp_2023": 69268.12
+  },
+  {
+    "iso3": "IND",
+    "country": "India",
+    "gdp_1990": 2203.15,
+    "gdp_2023": 8870.55
+  },
+  {
+    "iso3": "IDN",
+    "country": "Indonesia",
+    "gdp_1990": 4873.05,
+    "gdp_2023": 13889.95
+  },
+  {
+    "iso3": "IRN",
+    "country": "Iran, Islamic Rep.",
+    "gdp_1990": 9656.0,
+    "gdp_2023": 17044.82
+  },
+  {
+    "iso3": "IRQ",
+    "country": "Iraq",
+    "gdp_1990": 10735.09,
+    "gdp_2023": 13202.32
+  },
+  {
+    "iso3": "IRL",
+    "country": "Ireland",
+    "gdp_1990": 29555.63,
+    "gdp_2023": 117659.73
+  },
+  {
+    "iso3": "ISR",
+    "country": "Israel",
+    "gdp_1990": 25335.27,
+    "gdp_2023": 47671.25
+  },
+  {
+    "iso3": "ITA",
+    "country": "Italy",
+    "gdp_1990": 42656.74,
+    "gdp_2023": 52842.63
+  },
+  {
+    "iso3": "JAM",
+    "country": "Jamaica",
+    "gdp_1990": 8879.65,
+    "gdp_2023": 11398.81
+  },
+  {
+    "iso3": "JPN",
+    "country": "Japan",
+    "gdp_1990": 35272.42,
+    "gdp_2023": 47387.22
+  },
+  {
+    "iso3": "JOR",
+    "country": "Jordan",
+    "gdp_1990": 7589.82,
+    "gdp_2023": 10308.78
+  },
+  {
+    "iso3": "KAZ",
+    "country": "Kazakhstan",
+    "gdp_1990": 16837.69,
+    "gdp_2023": 34703.23
+  },
+  {
+    "iso3": "KEN",
+    "country": "Kenya",
+    "gdp_1990": 4177.49,
+    "gdp_2023": 5691.83
+  },
+  {
+    "iso3": "KIR",
+    "country": "Kiribati",
+    "gdp_1990": 2213.54,
+    "gdp_2023": 3175.02
+  },
+  {
+    "iso3": "KOR",
+    "country": "Korea, Rep.",
+    "gdp_1990": 14377.88,
+    "gdp_2023": 54029.34
+  },
+  {
+    "iso3": "KWT",
+    "country": "Kuwait",
+    "gdp_1990": 38932.94,
+    "gdp_2023": 47790.19
+  },
+  {
+    "iso3": "KGZ",
+    "country": "Kyrgyz Republic",
+    "gdp_1990": 6095.68,
+    "gdp_2023": 6575.78
+  },
+  {
+    "iso3": "LAO",
+    "country": "Lao PDR",
+    "gdp_1990": 2005.5,
+    "gdp_2023": 8372.16
+  },
+  {
+    "iso3": "LVA",
+    "country": "Latvia",
+    "gdp_1990": 17508.79,
+    "gdp_2023": 37277.72
+  },
+  {
+    "iso3": "LBN",
+    "country": "Lebanon",
+    "gdp_1990": 5345.51,
+    "gdp_2023": 11330.27
+  },
+  {
+    "iso3": "LSO",
+    "country": "Lesotho",
+    "gdp_1990": 1422.15,
+    "gdp_2023": 2592.46
+  },
+  {
+    "iso3": "LBR",
+    "country": "Liberia",
+    "gdp_1990": 1866.41,
+    "gdp_2023": 1616.92
+  },
+  {
+    "iso3": "LBY",
+    "country": "Libya",
+    "gdp_1990": 18126.59,
+    "gdp_2023": 12476.6
+  },
+  {
+    "iso3": "LTU",
+    "country": "Lithuania",
+    "gdp_1990": 20586.23,
+    "gdp_2023": 46333.9
+  },
+  {
+    "iso3": "LUX",
+    "country": "Luxembourg",
+    "gdp_1990": 81450.57,
+    "gdp_2023": 130048.92
+  },
+  {
+    "iso3": "MAC",
+    "country": "Macao SAR, China",
+    "gdp_1990": 55300.74,
+    "gdp_2023": 104815.2
+  },
+  {
+    "iso3": "MDG",
+    "country": "Madagascar",
+    "gdp_1990": 1968.27,
+    "gdp_2023": 1629.61
+  },
+  {
+    "iso3": "MWI",
+    "country": "Malawi",
+    "gdp_1990": 1047.46,
+    "gdp_2023": 1649.3
+  },
+  {
+    "iso3": "MYS",
+    "country": "Malaysia",
+    "gdp_1990": 12013.7,
+    "gdp_2023": 32857.67
+  },
+  {
+    "iso3": "MDV",
+    "country": "Maldives",
+    "gdp_1990": 8945.8,
+    "gdp_2023": 22333.05
+  },
+  {
+    "iso3": "MLI",
+    "country": "Mali",
+    "gdp_1990": 1890.5,
+    "gdp_2023": 2861.48
+  },
+  {
+    "iso3": "MLT",
+    "country": "Malta",
+    "gdp_1990": 18207.43,
+    "gdp_2023": 60459.77
+  },
+  {
+    "iso3": "MHL",
+    "country": "Marshall Islands",
+    "gdp_1990": 3905.59,
+    "gdp_2023": 6774.78
+  },
+  {
+    "iso3": "MRT",
+    "country": "Mauritania",
+    "gdp_1990": 5519.61,
+    "gdp_2023": 6276.48
+  },
+  {
+    "iso3": "MUS",
+    "country": "Mauritius",
+    "gdp_1990": 9058.67,
+    "gdp_2023": 26471.04
+  },
+  {
+    "iso3": "MEX",
+    "country": "Mexico",
+    "gdp_1990": 17169.59,
+    "gdp_2023": 21864.92
+  },
+  {
+    "iso3": "FSM",
+    "country": "Micronesia, Fed. Sts.",
+    "gdp_1990": 3112.46,
+    "gdp_2023": 3841.27
+  },
+  {
+    "iso3": "MDA",
+    "country": "Moldova",
+    "gdp_1990": 15902.89,
+    "gdp_2023": 15980.57
+  },
+  {
+    "iso3": "MNG",
+    "country": "Mongolia",
+    "gdp_1990": 6637.82,
+    "gdp_2023": 16222.86
+  },
+  {
+    "iso3": "MAR",
+    "country": "Morocco",
+    "gdp_1990": 4418.66,
+    "gdp_2023": 8915.35
+  },
+  {
+    "iso3": "MOZ",
+    "country": "Mozambique",
+    "gdp_1990": 547.62,
+    "gdp_2023": 1512.67
+  },
+  {
+    "iso3": "MMR",
+    "country": "Myanmar",
+    "gdp_1990": 775.33,
+    "gdp_2023": 5364.14
+  },
+  {
+    "iso3": "NAM",
+    "country": "Namibia",
+    "gdp_1990": 7281.78,
+    "gdp_2023": 10126.24
+  },
+  {
+    "iso3": "NRU",
+    "country": "Naoero",
+    "gdp_1990": 30123.37,
+    "gdp_2023": 11858.52
+  },
+  {
+    "iso3": "NPL",
+    "country": "Nepal",
+    "gdp_1990": 1808.26,
+    "gdp_2023": 4861.23
+  },
+  {
+    "iso3": "NLD",
+    "country": "Netherlands",
+    "gdp_1990": 43128.31,
+    "gdp_2023": 70198.95
+  },
+  {
+    "iso3": "NZL",
+    "country": "New Zealand",
+    "gdp_1990": 30695.47,
+    "gdp_2023": 49592.59
+  },
+  {
+    "iso3": "NIC",
+    "country": "Nicaragua",
+    "gdp_1990": 4217.61,
+    "gdp_2023": 7496.53
+  },
+  {
+    "iso3": "NER",
+    "country": "Niger",
+    "gdp_1990": 1411.85,
+    "gdp_2023": 1712.97
+  },
+  {
+    "iso3": "NGA",
+    "country": "Nigeria",
+    "gdp_1990": 5423.81,
+    "gdp_2023": 7843.0
+  },
+  {
+    "iso3": "MKD",
+    "country": "North Macedonia",
+    "gdp_1990": 12904.54,
+    "gdp_2023": 23455.22
+  },
+  {
+    "iso3": "NOR",
+    "country": "Norway",
+    "gdp_1990": 57106.88,
+    "gdp_2023": 94364.96
+  },
+  {
+    "iso3": "OMN",
+    "country": "Oman",
+    "gdp_1990": 35201.55,
+    "gdp_2023": 37793.62
+  },
+  {
+    "iso3": "PAK",
+    "country": "Pakistan",
+    "gdp_1990": 3199.73,
+    "gdp_2023": 5418.77
+  },
+  {
+    "iso3": "PLW",
+    "country": "Palau",
+    "gdp_1990": 17851.18,
+    "gdp_2023": 16487.15
+  },
+  {
+    "iso3": "PAN",
+    "country": "Panama",
+    "gdp_1990": 10263.69,
+    "gdp_2023": 35872.97
+  },
+  {
+    "iso3": "PNG",
+    "country": "Papua New Guinea",
+    "gdp_1990": 3164.15,
+    "gdp_2023": 4206.38
+  },
+  {
+    "iso3": "PRY",
+    "country": "Paraguay",
+    "gdp_1990": 9962.48,
+    "gdp_2023": 15831.58
+  },
+  {
+    "iso3": "PER",
+    "country": "Peru",
+    "gdp_1990": 6317.08,
+    "gdp_2023": 15342.27
+  },
+  {
+    "iso3": "PHL",
+    "country": "Philippines",
+    "gdp_1990": 4504.46,
+    "gdp_2023": 9898.53
+  },
+  {
+    "iso3": "POL",
+    "country": "Poland",
+    "gdp_1990": 12821.46,
+    "gdp_2023": 43672.77
+  },
+  {
+    "iso3": "PRT",
+    "country": "Portugal",
+    "gdp_1990": 27190.57,
+    "gdp_2023": 41768.26
+  },
+  {
+    "iso3": "PRI",
+    "country": "Puerto Rico (US)",
+    "gdp_1990": 26738.81,
+    "gdp_2023": 42837.87
+  },
+  {
+    "iso3": "QAT",
+    "country": "Qatar",
+    "gdp_1990": 71584.38,
+    "gdp_2023": 116159.14
+  },
+  {
+    "iso3": "ROU",
+    "country": "Romania",
+    "gdp_1990": 16316.91,
+    "gdp_2023": 40116.69
+  },
+  {
+    "iso3": "RUS",
+    "country": "Russian Federation",
+    "gdp_1990": 29643.6,
+    "gdp_2023": 39881.45
+  },
+  {
+    "iso3": "RWA",
+    "country": "Rwanda",
+    "gdp_1990": 1122.99,
+    "gdp_2023": 3168.03
+  },
+  {
+    "iso3": "WSM",
+    "country": "Samoa",
+    "gdp_1990": 3990.93,
+    "gdp_2023": 7384.69
+  },
+  {
+    "iso3": "STP",
+    "country": "Sao Tome and Principe",
+    "gdp_1990": 3883.2,
+    "gdp_2023": 5541.3
+  },
+  {
+    "iso3": "SAU",
+    "country": "Saudi Arabia",
+    "gdp_1990": 65196.57,
+    "gdp_2023": 64481.84
+  },
+  {
+    "iso3": "SEN",
+    "country": "Senegal",
+    "gdp_1990": 2923.34,
+    "gdp_2023": 4304.76
+  },
+  {
+    "iso3": "SYC",
+    "country": "Seychelles",
+    "gdp_1990": 15478.85,
+    "gdp_2023": 28713.67
+  },
+  {
+    "iso3": "SLE",
+    "country": "Sierra Leone",
+    "gdp_1990": 2703.6,
+    "gdp_2023": 3034.95
+  },
+  {
+    "iso3": "SGP",
+    "country": "Singapore",
+    "gdp_1990": 45567.79,
+    "gdp_2023": 130296.84
+  },
+  {
+    "iso3": "SVK",
+    "country": "Slovak Republic",
+    "gdp_1990": 17528.24,
+    "gdp_2023": 39501.95
+  },
+  {
+    "iso3": "SVN",
+    "country": "Slovenia",
+    "gdp_1990": 25345.05,
+    "gdp_2023": 47986.42
+  },
+  {
+    "iso3": "SLB",
+    "country": "Solomon Islands",
+    "gdp_1990": 2352.4,
+    "gdp_2023": 2339.87
+  },
+  {
+    "iso3": "ZAF",
+    "country": "South Africa",
+    "gdp_1990": 10811.15,
+    "gdp_2023": 13695.38
+  },
+  {
+    "iso3": "ESP",
+    "country": "Spain",
+    "gdp_1990": 31773.23,
+    "gdp_2023": 47322.59
+  },
+  {
+    "iso3": "LKA",
+    "country": "Sri Lanka",
+    "gdp_1990": 4561.58,
+    "gdp_2023": 13065.07
+  },
+  {
+    "iso3": "KNA",
+    "country": "St. Kitts and Nevis",
+    "gdp_1990": 14326.04,
+    "gdp_2023": 30616.58
+  },
+  {
+    "iso3": "LCA",
+    "country": "St. Lucia",
+    "gdp_1990": 17222.15,
+    "gdp_2023": 23636.03
+  },
+  {
+    "iso3": "VCT",
+    "country": "St. Vincent and the Grenadines",
+    "gdp_1990": 7467.38,
+    "gdp_2023": 17858.24
+  },
+  {
+    "iso3": "SDN",
+    "country": "Sudan",
+    "gdp_1990": 2460.19,
+    "gdp_2023": 2181.08
+  },
+  {
+    "iso3": "SUR",
+    "country": "Suriname",
+    "gdp_1990": 17137.65,
+    "gdp_2023": 19020.87
+  },
+  {
+    "iso3": "SWE",
+    "country": "Sweden",
+    "gdp_1990": 40549.31,
+    "gdp_2023": 62122.51
+  },
+  {
+    "iso3": "CHE",
+    "country": "Switzerland",
+    "gdp_1990": 64010.76,
+    "gdp_2023": 85383.36
+  },
+  {
+    "iso3": "TJK",
+    "country": "Tajikistan",
+    "gdp_1990": 4173.05,
+    "gdp_2023": 4472.32
+  },
+  {
+    "iso3": "TZA",
+    "country": "Tanzania",
+    "gdp_1990": 1794.2,
+    "gdp_2023": 3620.79
+  },
+  {
+    "iso3": "THA",
+    "country": "Thailand",
+    "gdp_1990": 8701.95,
+    "gdp_2023": 21245.27
+  },
+  {
+    "iso3": "TLS",
+    "country": "Timor-Leste",
+    "gdp_1990": 2143.79,
+    "gdp_2023": 4331.08
+  },
+  {
+    "iso3": "TGO",
+    "country": "Togo",
+    "gdp_1990": 2237.6,
+    "gdp_2023": 3215.82
+  },
+  {
+    "iso3": "TON",
+    "country": "Tonga",
+    "gdp_1990": 4487.82,
+    "gdp_2023": 7031.32
+  },
+  {
+    "iso3": "TTO",
+    "country": "Trinidad and Tobago",
+    "gdp_1990": 11869.53,
+    "gdp_2023": 31196.6
+  },
+  {
+    "iso3": "TUN",
+    "country": "Tunisia",
+    "gdp_1990": 6742.58,
+    "gdp_2023": 12650.96
+  },
+  {
+    "iso3": "TUR",
+    "country": "Turkiye",
+    "gdp_1990": 12184.2,
+    "gdp_2023": 35069.17
+  },
+  {
+    "iso3": "TKM",
+    "country": "Turkmenistan",
+    "gdp_1990": 7925.5,
+    "gdp_2023": 17685.86
+  },
+  {
+    "iso3": "TUV",
+    "country": "Tuvalu",
+    "gdp_1990": 2984.29,
+    "gdp_2023": 5315.16
+  },
+  {
+    "iso3": "UGA",
+    "country": "Uganda",
+    "gdp_1990": 1080.04,
+    "gdp_2023": 2791.06
+  },
+  {
+    "iso3": "UKR",
+    "country": "Ukraine",
+    "gdp_1990": 22815.8,
+    "gdp_2023": 15916.96
+  },
+  {
+    "iso3": "ARE",
+    "country": "United Arab Emirates",
+    "gdp_1990": 111377.05,
+    "gdp_2023": 70239.83
+  },
+  {
+    "iso3": "GBR",
+    "country": "United Kingdom",
+    "gdp_1990": 32993.17,
+    "gdp_2023": 53423.42
+  },
+  {
+    "iso3": "USA",
+    "country": "United States",
+    "gdp_1990": 44378.52,
+    "gdp_2023": 74351.67
+  },
+  {
+    "iso3": "URY",
+    "country": "Uruguay",
+    "gdp_1990": 14060.85,
+    "gdp_2023": 31100.97
+  },
+  {
+    "iso3": "UZB",
+    "country": "Uzbekistan",
+    "gdp_1990": 4214.58,
+    "gdp_2023": 10514.1
+  },
+  {
+    "iso3": "VUT",
+    "country": "Vanuatu",
+    "gdp_1990": 3101.68,
+    "gdp_2023": 3782.83
+  },
+  {
+    "iso3": "VNM",
+    "country": "Viet Nam",
+    "gdp_1990": 2467.96,
+    "gdp_2023": 13534.8
+  },
+  {
+    "iso3": "ZMB",
+    "country": "Zambia",
+    "gdp_1990": 2425.11,
+    "gdp_2023": 3673.48
+  },
+  {
+    "iso3": "ZWE",
+    "country": "Zimbabwe",
+    "gdp_1990": 6082.84,
+    "gdp_2023": 5218.05
+  }
+]

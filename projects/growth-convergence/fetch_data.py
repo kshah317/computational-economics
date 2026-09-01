@@ -9,6 +9,7 @@ from typing import Dict, List
 
 API_ROOT = "https://api.worldbank.org/v2"
 INDICATOR = "NY.GDP.PCAP.PP.KD"  # GDP per capita, PPP (constant international $)
+POP_INDICATOR = "SP.POP.TOTL"  # total population, used for the weighted regression
 START_YEAR = 1990
 END_YEAR = 2023
 OUT_PATH = "data/gdp_per_capita_1990_2023.json"
@@ -45,9 +46,11 @@ def fetch_real_country_names() -> Dict[str, str]:
     return names
 
 
-def fetch_gdp_for_year(year: int) -> Dict[str, float]:
-    # one request gets every country's value for a single year at once
-    url = f"{API_ROOT}/country/all/indicator/{INDICATOR}?date={year}&format=json&per_page=400"
+def fetch_indicator_for_year(indicator: str, year: int) -> Dict[str, float]:
+    # one request gets every country's value for a single year at once,
+    # works the same way for gdp per capita or population or any other
+    # single-value-per-country-per-year world bank indicator
+    url = f"{API_ROOT}/country/all/indicator/{indicator}?date={year}&format=json&per_page=400"
     payload = _get_json(url)
     records = payload[1] or []
     values = {}
@@ -60,21 +63,25 @@ def fetch_gdp_for_year(year: int) -> Dict[str, float]:
 
 
 def build_dataset() -> List[dict]:
-    # combines the two years, keeping only real countries that have a
-    # usable number in both 1990 and 2023, since the whole point of this
-    # project is comparing the same country across that span
+    # combines gdp for both years plus 1990 population, keeping only real
+    # countries that have a usable number for all three, since the whole
+    # point of this project is comparing the same country across that span
+    # (population is only used to weight the robustness-check regression,
+    # see convergence.py, but it travels with the rest of the row)
     real_countries = fetch_real_country_names()
-    gdp_start = fetch_gdp_for_year(START_YEAR)
-    gdp_end = fetch_gdp_for_year(END_YEAR)
+    gdp_start = fetch_indicator_for_year(INDICATOR, START_YEAR)
+    gdp_end = fetch_indicator_for_year(INDICATOR, END_YEAR)
+    pop_start = fetch_indicator_for_year(POP_INDICATOR, START_YEAR)
 
     rows = []
     for iso3, name in real_countries.items():
-        if iso3 in gdp_start and iso3 in gdp_end:
+        if iso3 in gdp_start and iso3 in gdp_end and iso3 in pop_start:
             rows.append({
                 "iso3": iso3,
                 "country": name,
                 "gdp_1990": round(gdp_start[iso3], 2),
                 "gdp_2023": round(gdp_end[iso3], 2),
+                "pop_1990": int(pop_start[iso3]),
             })
     rows.sort(key=lambda r: r["country"])
     return rows
